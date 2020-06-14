@@ -1,4 +1,7 @@
-Dir=getDirectory("Choose a Directory"); //chose directory with files
+macro "tm_calc_2compFLIM" {
+setOption("JFileChooser", true);
+Dir=getDirectory("Choose a folder with SPCImage export files"); //chose directory with files
+setOption("JFileChooser", false);
 list = getFileList(Dir); //get all files in indicated directory
 for (i=0;i<list.length;i++){
 	if (matches(list[i],".*_t2.asc*")){ //selecting the files with t2 data
@@ -48,4 +51,5 @@ for (i=0;i<list.length;i++){
         //closing all open windows 
         run("Close All");
          	}
+     };
      }
