@@ -1,12 +1,23 @@
 # FLIMacro
 ImageJ/FIJI macro for processing fluorescence lifetime measurements
 
-This macro generates an ImageJ/FIJI text image file with mean fluorescence lifetimes determined by 2-component exponential decay fitting, form SPCImage export files. 
+###Description
+This macro generates an ImageJ/FIJI text image file with mean fluorescence lifetimes determined by a 2-component exponential decay fitting, form SPCImage export files. 
 
-SPCImage software (Becker&Hickl) calculates fluorescence lifetimes in each pixel of a fluorescence lifetime data file, and stores it in a proprietary file format. In order to extract data for further analysis, the matrices of fluorescence lifetimes and/or photon numbers in pixel positions is such files can be exported in ASC format (file with .asc extension). However, for the fluorescence lifetimes calculated using multi-component decay model within SPCImage, mean fluorescence lifetimes are not available for export. Instead, the matrices with values of the individual fluorescence lifetime components and of their respective amplitudes can be exported, and mean fluorescence lifetime in each pixel has to be calculated from these elements. 
+The **tm_calc_2compFLIM.ijm** macro creates a new text image file containing mean fluorescence lifetimes (*tm*) in pixel positions, calculated as follows: 
 
-The tm_calc_2compFLIM.ijm macro accesses the SPCImage export files with elements of 2-component analysis, and creates new images containing calculated mean fluorescence lifetimes in pixel positions. It requires all four export files  (with common name followed by "_t1.asc", "_t2.asc", "_a1.asc" and "_a2.asc") to be in the same folder. The resulting file, which will have the same name ending with "_tm.txt", will be added to the same folder. 
+***tm = (a1t1 + a2t2)/(a1 + a2)***, 
 
-If the export files from multiple measurements are in the same folder, they will be processed all at once, and resulting files will be added to the same folder. 
+where *t1*, *t2*, *a1* and *a2* are the values of first (*t1*) and second (*t2*) fluorescence lifetime components and their corresponding amplitudes (*a1* and *a2*) at the same pixel position. These values are obtained from four files containing *t1*, *a1*, *t2* and *a2* matrices exported from one image in SPCImage software (Becker&Hickl GmbH) after fluorescence lifetime in this image has been calculated using 2-component exponential decay model.
 
-To use, download the macro and save it into the ImageJ or FIJI "plugins" folder. For ImageJ, place it into "Scripts" subfolder inside the "plugings" folder. For FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents" to see the "plugins" folder. The macro could be placed directly inside this folder.  Restart ImageJ/FIJI. The "tm calc 2compFLIM" item will appear on the list in the Plugings menu, or within its Script submenu. Run the macro by clicking on it. It will open the file browser window. Navigate to the folder with SPCImage export file and click "Open". 
+###Requirements:
+A folder with SPCImage export files. For each measurement, four files containing values of *t1*, *a1*, *t2* and *a2*, exported from the same image in SPCImage software (Becker&Hickl GmbH) after calculating fluorescence lifetime using 2-component model, are required. Export files from multiple measurements can be processed at once, if they are placed in the same folder. Export files from the same measurement should have a common name followed by "\_t1.asc", "\_a1.asc", "\_t2.asc" and "\_a2.asc", respectively. 
+
+ImageJ or FIJI. Macro was developed for versions 1.52q and 1.52p. Other versions not tested.
+
+###Installation:
+Download from this page (click on "Clone or download" button, choose "Downoad Zip"), and unzip the downloaded file.  Save **tm_calc_2compFLIM.ijm** file into the ImageJ or FIJI "plugins" folder, or into a desired subfolder within it (such as “Scripts”). To see “plugins” folder for FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents". 
+Restart ImageJ/FIJI. The **tm calc 2compFLIM** item will appear on the list in the Plugings menu, or within its selected submenu.
+
+###Usage: 
+Run the macro by clicking on **tm calc 2compFLIM** item in the Plugins menu. It will open the file browser window, prompting to select the folder with the SPCImage export files. Navigate to that folder and click "Select". The resulting file(s) with mean fluorescence lifetime values created by the macro for each measurement, with the name(s) ending with "\_tm.txt", will be added to the same folder.
