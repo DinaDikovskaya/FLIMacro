@@ -16,8 +16,8 @@ A folder with SPCImage export files. For each measurement, the four files contai
 ImageJ or FIJI. This macro was developed for versions 1.52q and 1.52p. Other versions not tested.
 
 ## Installation:
-Download FLIMacro content from this page (click on "Clone or download" button, choose "Downoad Zip"), and unzip the downloaded file.  Save **tm_2cFLIM.ijm** file into the ImageJ or FIJI "plugins" folder, or into a desired subfolder within it (such as “Scripts”). To see the “plugins” folder for FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents". 
-Restart ImageJ/FIJI. The **tm 2cFLIM** item will appear on the list in the Plugings menu, or within its selected submenu.
+Download FLIMacro content from this page (click on "Clone or download" button, choose "Download Zip"), and unzip the downloaded file.  Save **tm_2cFLIM.ijm** file into the ImageJ or FIJI "plugins" folder, or into a desired subfolder within it (such as “Scripts”). To see the “plugins” folder for FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents". 
+Restart ImageJ/FIJI. The **tm 2cFLIM** item will appear on the list in the Plugins menu, or within its selected submenu.
 
 ## Usage: 
 Run the macro by clicking on the **tm 2cFLIM** item in the Plugins menu. It will open the file browser window, prompting to select the folder with the SPCImage export files. Navigate to that folder and click "Select". The resulting file(s) with mean fluorescence lifetime values created by the macro for each measurement, with the name(s) ending with "\_tm.txt", will be added to the same folder.
