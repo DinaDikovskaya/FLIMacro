@@ -1,4 +1,4 @@
-macro "tm_calc_2compFLIM" {
+macro "tm_2cFLIM" {
 setOption("JFileChooser", true);
 Dir=getDirectory("Choose a folder with SPCImage export files"); //chose directory with files
 setOption("JFileChooser", false);
