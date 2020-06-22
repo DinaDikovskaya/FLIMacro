@@ -1,7 +1,7 @@
 # FLIMacro
 ImageJ/FIJI macro for processing fluorescence lifetime measurements
 
-## Description
+## Description:
 This macro generates an ImageJ/FIJI text image file containing mean fluorescence lifetimes determined by a 2-component exponential decay fitting, from SPCImage export files. 
 
 The **tm_2cFLIM.ijm** macro creates a new text image file containing mean fluorescence lifetimes (*tm*) in pixel positions, calculated as follows: 
