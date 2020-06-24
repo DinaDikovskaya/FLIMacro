@@ -16,7 +16,7 @@ A folder with SPCImage export files. For each measurement, the four files contai
 ImageJ or FIJI. This macro was developed for versions 1.52q and 1.52p. Other versions not tested.
 
 ## Installation:
-Download FLIMacro content from this page (click on "Clone or download" button, choose "Download Zip"), and unzip the downloaded file.  Save **tm_2cFLIM.ijm** file into the ImageJ or FIJI "plugins" folder, or into a desired subfolder within it (such as “Scripts”). To see the “plugins” folder for FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents". 
+Download FLIMacro content from this page (click on "Clone" button, choose "Download Zip"), and unzip the downloaded file.  Save **tm_2cFLIM.ijm** file into the ImageJ or FIJI "plugins" folder, or into a desired subfolder within it (such as “Scripts”). To see the “plugins” folder for FIJI on Mac, double-click on the FIJI app icon and select "Show Package Contents". 
 Restart ImageJ/FIJI. The **tm 2cFLIM** item will appear on the list in the Plugins menu, or within its selected submenu.
 
 ## Usage: 
